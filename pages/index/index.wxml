@@ -1,0 +1,5 @@
+<!--index.wxml-->
+  <image src='../../images/1.0.png'></image>
+<view class="main">
+  <text clase="say">我的爱人，我会牵着你的手，走到满头白发的那一天，</text>
+</view>

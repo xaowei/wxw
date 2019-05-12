@@ -1,0 +1,6 @@
+<view class="index_wrap" >
+  <view class="index_story_text">{{text}}</view>
+  <view class="{{showView?'header_view_show':'header_view_hide'}}" style='padding-top:100px'>
+    <button bindtap='tell'>Call me</button>
+  </view>
+</view> 

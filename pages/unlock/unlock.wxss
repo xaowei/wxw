@@ -1,0 +1,14 @@
+.index_wrap{
+  background-image:  url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557565783269&di=a7e1da7484a0a36c984f3a449f35d7a5&imgtype=0&src=http%3A%2F%2Fpic38.nipic.com%2F20140220%2F17880603_112401029316_2.jpg');
+  width: 750rpx;
+  height: 800px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.header_view_hide{
+  display: none;
+}
+
+.header_view_show{
+  display: block;
+}

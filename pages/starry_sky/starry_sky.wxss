@@ -1,0 +1,321 @@
+/* 背景 */
+page {
+  background-image:  url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557565783269&di=a7e1da7484a0a36c984f3a449f35d7a5&imgtype=0&src=http%3A%2F%2Fpic38.nipic.com%2F20140220%2F17880603_112401029316_2.jpg');
+  /* background: radial-gradient(200% 100% at bottom center, #1b2947, #000); */
+  /* background: radial-gradient(220% 100% at top center, #1b2947 30%, #75517d 65%, #e96f92 85%, #f7f7b6); */
+  background-attachment: fixed;
+  overflow: hidden;
+  width: 750rpx;
+  height: 800px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+@keyframes rotate {
+  0% {
+    transform: perspective(800px) rotateZ(0deg) rotateX(0deg) rotateY(0);
+  }
+
+  100% {
+    transform: perspective(800px) rotateZ(180deg) rotateX(0deg) rotateY(0deg);
+  }
+}
+
+@keyframes rotate2 {
+  0% {
+    transform: perspective(800px) rotateZ(180deg) rotateX(0deg) rotateY(0);
+  }
+
+  100% {
+    transform: perspective(800px) rotateZ(360deg) rotateX(0deg) rotateY(0deg);
+  }
+}
+
+.stars {
+  transform: perspective(800px);
+  transform-style: preserve-3d;
+  position: absolute;
+  bottom: 0;
+  perspective-origin: 80% 100%;
+  left: 50%;
+  animation: rotate 30s infinite linear;
+}
+
+.stars2 {
+  transform: perspective(800px);
+  transform-style: preserve-3d;
+  position: absolute;
+  bottom: 0;
+  perspective-origin: 80% 100%;
+  left: 50%;
+  animation: rotate2 30s infinite linear;
+}
+
+.star {
+  width: 2px;
+  height: 2px;
+  border-radius: 2px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 0 0 -900px;
+  transform: translate3d(0, 0, -900px);
+  backface-visibility: hidden;
+}
+
+/* 背景-结束 */
+
+.companyBox .one,.two,.three,.four,.five,.six,.seven{
+  margin-top: 50rpx;
+  color: #fff;
+  font-size: 30rpx;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/**动画一sideSlide*/
+.companyBox .one text {
+  opacity: 0;
+  transform: translate(-300px, 0) scale(0);
+  animation: sideSlide 0.5s forwards;
+}
+@keyframes sideSlide {
+  60% {
+    transform: translate(20px, 0) scale(1);
+    color: #fff;
+  }
+
+  80% {
+    transform: translate(20px, 0) scale(1);
+    color: #fff;
+  }
+
+  99% {
+    transform: translate(0) scale(1.2);
+    color: #00f0ff;
+  }
+
+  100% {
+    transform: translate(0) scale(1);
+    opacity: 1;
+    color: #fff;
+  }
+}
+/**动画一sideSlide*/
+/* 动画二 leftRight*/
+ .companyBox .two text{
+  opacity: 0;
+  transform: translate(-300px, 0) scale(0);
+  animation: leftRight 0.5s forwards;
+} 
+@keyframes leftRight {
+  40% {
+    transform: translate(50px, 0) scale(.7);
+    opacity: 1;
+    color: #348c04;
+  }
+  60% {
+    color: #0f40ba;
+  }
+  80% {
+    transform: translate(0) scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0) scale(1);
+    opacity: 1;
+  }
+}
+/* 动画二 leftRight*/
+/* 动画三revolveScale */
+ .companyBox .three text{
+  color: #000000;
+  opacity: 0;
+  transform: translate(-150px, -50px) rotate(-180deg) scale(3);
+  animation: revolveScale .5s forwards;
+} 
+
+@keyframes revolveScale {
+  60% {
+    transform: translate(20px, 20px) rotate(30deg) scale(.3);
+  }
+  100% {
+    transform: translate(0) rotate(0) scale(1);
+    opacity: 1;
+  }
+}
+/* 动画三revolveScale */
+/* 动画四 */
+.companyBox .four text{
+  /* color: #a5cb21; */
+  opacity: 0;
+  transform: translate(200px, -100px) scale(2);
+  animation: ballDrop .3s forwards;
+}
+
+@keyframes ballDrop {
+  60% {
+    transform: translate(0, 20px) rotate(-180deg) scale(.5);
+  }
+  100% {
+    transform: translate(0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+/* 动画四 */
+/* 动画五 */
+.companyBox .five text {
+  color: #dd3f0f;
+  opacity: 0;
+  transform: translate(0, -100px) rotate(360deg) scale(0);
+  animation: dropVanish .5s forwards;
+}
+
+@keyframes dropVanish {
+  30% {
+    transform: translate(0, -50px) rotate(180deg) scale(1);
+  }
+  50% {
+    transform: translate(0, 20px) scale(.8) rotate(0deg);
+    opacity: 1;
+  }
+  80% {
+    transform: translate(-100px, -100px) scale(1.5) rotate(-180deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0) scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+/* 动画五 */
+/* 动画六-twister */
+.companyBox .six text {
+  color: #ddb40f;
+  opacity: 0;
+  transform: rotate(-180deg) translate(150px, 0);
+  animation: twister .5s forwards;
+}
+
+@keyframes twister {
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(0deg) translate(0);
+    opacity: 1;
+  }
+}
+/* 动画六-结束twister */
+/* 动画七revolveDrop */
+.companyBox .seven text {
+  color: #8d6a00;
+  opacity: 0;
+  transform: translate(0, -100px) rotate(360deg) scale(0);
+  animation: revolveDrop .3s forwards;
+}
+
+@keyframes revolveDrop {
+  30% {
+    transform: translate(0, -50px) rotate(180deg) scale(1);
+  }
+  60% {
+    transform: translate(0, 20px) scale(.8) rotate(0deg);
+  }
+  100% {
+    transform: translate(0) scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+/* 动画七revolveDrop */
+.animate text:nth-child(1){
+ animation-delay: .1s;
+}
+.animate text:nth-child(2){
+ animation-delay: .2s;
+}
+.animate text:nth-child(3){
+ animation-delay: .3s;
+}
+.animate text:nth-child(4){
+ animation-delay: .4s;
+}
+.animate text:nth-child(5){
+ animation-delay: .5s;
+}
+.animate text:nth-child(6){
+ animation-delay: .6s;
+}
+.animate text:nth-child(7){
+ animation-delay: .7s;
+}
+.animate text:nth-child(8){
+ animation-delay: .8s;
+}
+.animate text:nth-child(9){
+ animation-delay: .9s;
+}
+.animate text:nth-child(10){
+ animation-delay: 1s;
+}
+.animate text:nth-child(11){
+ animation-delay: 1.1s;
+}
+.animate text:nth-child(12){
+ animation-delay: 1.2s;
+}
+.animate text:nth-child(13){
+ animation-delay: 1.3s;
+}
+.animate text:nth-child(14){
+ animation-delay: 1.4s;
+}
+.animate text:nth-child(15){
+ animation-delay: 1.5s;
+}
+.animate text:nth-child(16){
+ animation-delay: 1.6s;
+}
+.animate text:nth-child(17){
+ animation-delay: 1.7s;
+}
+.animate text:nth-child(18){
+ animation-delay: 1.8s;
+}
+.animate text:nth-child(19){
+ animation-delay: 1.9s;
+}
+.animate text:nth-child(20){
+ animation-delay: 2s;
+}
+.animate text:nth-child(21){
+ animation-delay: 2.1s;
+}
+.animate text:nth-child(22){
+ animation-delay: 2.2s;
+}
+.animate text:nth-child(23){
+ animation-delay: 2.3s;
+}
+.animate text:nth-child(24){
+ animation-delay: 2.4s;
+}
+.tell{
+  width: 500rpx;
+  height: 100rpx;
+  margin-top: 80rpx;
+  padding-left: 20%;
+  color: #999999;
+  border-radius: 0rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+}
+.btn{
+  background: linear-gradient(to right, rgb(247, 245, 245) ,#fad7e3);
+}

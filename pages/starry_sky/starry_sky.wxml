@@ -1,0 +1,43 @@
+<!--pages/welcome/welcome.wxml--> 
+<view class="stars"> 
+<block wx:for="{{stararray}}" wx:key="stararray" wx:for-item="item" wx:for-index="index"> 
+<view class="star" style="transform-origin: 0px 0px {{item.curR}}px; transform: translate3d(0px, 0px, {{item.curR}}px) rotateY({{item.rotateY}}deg) rotateX({{item.rotateX}}deg) scale({{item.s}}, {{item.s}});"></view> 
+</block> 
+</view> 
+<view class="companyBox"> 
+  <view class="animate three"> 
+    <text>我的爱人</text> 
+    <text>我会牵着你的手</text>  
+    <text>走到满头白发的那一天</text>  
+    <text>我会守护你生命里的精彩</text>  
+    <text>并陪伴你一路精彩下去</text>  
+    <text>你的幸福快乐</text>  
+    <text>是我一生的追求</text>  
+    <text>我会每一天带着笑脸</text> 
+    <text>和你说早安</text> 
+    <text>我会每一晚与你道声晚安再入梦乡</text> 
+    <text>我会带你去所有你想去的地方</text> 
+    <text>陪你闹看你笑</text> 
+    <text>历经你生命中所有的点点滴滴</text> 
+    <text>我期待这一生与你一起走过</text>  
+    <text>我期待与你慢慢变老</text>  
+    <text>等我们老到哪儿也去不了</text>  
+    <text>还能满载着一生的幸福快乐</text>  
+    <text>我会为我们的未来撑起一片天空</text>  
+    <text>愿意为你去做每一件能让你开心快乐的事</text> 
+    <text>所有我们经历的点点滴滴</text> 
+    <text>都是我们一辈子最美的回忆</text> 
+    <text>我愿意爱你直到老去</text> 
+    <text>余生</text> 
+    <text>我不会让你受任何委屈</text>  
+
+  </view> 
+</view> 
+<view class="stars2"> 
+<block wx:for="{{stararray}}" wx:key="stararray" wx:for-item="item" wx:for-index="index"> 
+<view class="star" style="transform-origin: 0px 0px {{item.curR}}px; transform: translate3d(0px, 0px, {{item.curR}}px) rotateY({{item.rotateY}}deg) rotateX({{item.rotateX}}deg) scale({{item.s}}, {{item.s}});"></view> 
+</block> 
+</view>
+<view class="tell" >
+    <button bindtap='tell' class='btn'>waiting for you</button>
+</view>
